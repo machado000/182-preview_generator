@@ -1,0 +1,14 @@
+item,linha_criativa,veiculo,tamanho,tempo,looping,complexidade,tipo,iframe_src,iframe_width,iframe_height
+1,transicao_energetica_300x250,---,150kb,---,indeterminado,HTML,desenvolvimento,./transicao_energetica_300x250/index.html,300,250
+2,transicao_energetica_300x600,---,150kb,---,indeterminado,HTML,desenvolvimento,./transicao_energetica_300x600/index.html,300,600
+3,transicao_energetica_728x90,---,150kb,---,indeterminado,HTML,desenvolvimento,./transicao_energetica_728x90/index.html,728,90
+4,transicao_energetica_120x60,---,150kb,---,indeterminado,HTML,desenvolvimento,./transicao_energetica_120x60/index.html,120,60
+5,transicao_energetica_160x600,---,150kb,---,indeterminado,HTML,desenvolvimento,./transicao_energetica_160x600/index.html,160,600
+6,transicao_energetica_300x50,---,150kb,---,indeterminado,HTML,desenvolvimento,./transicao_energetica_300x50/index.html,300,50
+7,transicao_energetica_300x100,---,150kb,---,indeterminado,HTML,desenvolvimento,./transicao_energetica_300x100/index.html,300,100
+8,transicao_energetica_320x50,---,150kb,---,indeterminado,HTML,desenvolvimento,./transicao_energetica_320x50/index.html,320,50
+9,transicao_energetica_320x100,---,150kb,---,indeterminado,HTML,desenvolvimento,./transicao_energetica_320x100/index.html,320,100
+10,transicao_energetica_970x90,---,150kb,---,indeterminado,HTML,desenvolvimento,./transicao_energetica_970x90/index.html,970,90
+11,transicao_energetica_970x150,---,150kb,---,indeterminado,HTML,desenvolvimento,./transicao_energetica_970x150/index.html,970,150
+12,transicao_energetica_970x250,---,150kb,---,indeterminado,HTML,desenvolvimento,./transicao_energetica_970x250/index.html,970,250
+13,transicao_energetica_1920x150,---,150kb,---,indeterminado,HTML,desenvolvimento,./transicao_energetica_1920x150/index.html,1920,150
