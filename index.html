@@ -21,25 +21,20 @@
             font-size: 0.8rem;
         }
 
-        .topbar,
-        .table {
-            width: 100%;
-            font-size: 0.8rem;
-        }
-
         .topbar {
-            background-color: gray;
-            padding: 10px 30px;
             display: flex;
-            justify-content: space-between;
+            background-color: gray;
             align-items: center;
+            justify-content: space-between;
             height: 80px;
+            padding: 10px 30px;
             width: 100%;
         }
 
         .table {
             text-transform: uppercase;
             margin-bottom: 0;
+            width: 100%;
         }
 
         .expanded {
@@ -70,19 +65,13 @@
             .topbar,
             .table {
                 width: 100%;
-                font-size: 0.7rem;
+                font-size: 0.6rem;
             }
 
-            .topbar {
-                flex-direction: column;
-                height: auto;
-                padding: 10px;
+            .thead-dark {
+                font-size: 0.55rem;
             }
 
-            .topbar img {
-                max-width: 100%;
-                height: auto;
-            }
 
             .icon-button i {
                 font-size: 0.7rem;
@@ -137,8 +126,14 @@
                 <tr>
                     <th scope="col">Cliente: SECOM</th>
                     <th scope="col">Agência: NOVA</th>
-                    <th scope="col">Campanha: TRANSIÇÃO ENERGÉTICA</th>
-                    <th scope="col">Período: Outubro/2024</th>
+                    <th scope="col" class="d-none d-md-table-cell"></th>
+                    <th scope="col">Campanha: CONHECA O BRASIL 2024</th>
+                    <th scope="col" class="d-none d-md-table-cell"></th>
+                    <th scope="col" class="d-none d-md-table-cell"></th>
+                    <th scope="col" class="d-none d-lg-table-cell"></th>
+                    <th scope="col" class="d-none d-md-table-cell"></th>
+                    <th scope="col" class="d-none d-lg-table-cell"></th>
+                    <th scope="col">Período: Dezembro/2024</th>
                     <th scope="col">
                         <button class="icon-button" id="printButton" title="Imprimir relatório"
                             aria-label="Imprimir relatório">
@@ -169,10 +164,10 @@
                 </tr>
             </thead>
             <tbody>
-
+                
                 <tr>
                     <td>1</td>
-                    <td>transicao_energetica_300x250</td>
+                    <td>conheca_o_brasil_300x250</td>
                     <td class="d-none d-md-table-cell">---</td>
                     <td>300 x 250</td>
                     <td class="d-none d-md-table-cell">150kb</td>
@@ -189,18 +184,18 @@
                             <i class="material-icons">visibility</i></button>
                     </td>
                 </tr>
-                <tr class="expanded" id="row0">
+                <tr class="collapsed" id="row0">
                     <td colspan="11">
-                        <iframe src="./transicao_energetica_300x250/index.html" title="transicao_energetica_300x250"
-                            width="300px" height="250px" scrolling="no" frameborder="0"
-                            allow="autoplay; encrypted-media">
+                        <iframe src="./conheca_o_brasil_300x250/index.html" title="conheca_o_brasil_300x250"
+                            width="300px" height="250px" scrolling="no"
+                            frameborder="0" allow="autoplay; encrypted-media">
                         </iframe>
                     </td>
                 </tr>
-
+                
                 <tr>
                     <td>2</td>
-                    <td>transicao_energetica_300x600</td>
+                    <td>conheca_o_brasil_300x600</td>
                     <td class="d-none d-md-table-cell">---</td>
                     <td>300 x 600</td>
                     <td class="d-none d-md-table-cell">150kb</td>
@@ -217,18 +212,18 @@
                             <i class="material-icons">visibility</i></button>
                     </td>
                 </tr>
-                <tr class="expanded" id="row1">
+                <tr class="collapsed" id="row1">
                     <td colspan="11">
-                        <iframe src="./transicao_energetica_300x600/index.html" title="transicao_energetica_300x600"
-                            width="300px" height="600px" scrolling="no" frameborder="0"
-                            allow="autoplay; encrypted-media">
+                        <iframe src="./conheca_o_brasil_300x600/index.html" title="conheca_o_brasil_300x600"
+                            width="300px" height="600px" scrolling="no"
+                            frameborder="0" allow="autoplay; encrypted-media">
                         </iframe>
                     </td>
                 </tr>
-
+                
                 <tr>
                     <td>3</td>
-                    <td>transicao_energetica_728x90</td>
+                    <td>conheca_o_brasil_728x90</td>
                     <td class="d-none d-md-table-cell">---</td>
                     <td>728 x 90</td>
                     <td class="d-none d-md-table-cell">150kb</td>
@@ -245,15 +240,15 @@
                             <i class="material-icons">visibility</i></button>
                     </td>
                 </tr>
-                <tr class="expanded" id="row2">
+                <tr class="collapsed" id="row2">
                     <td colspan="11">
-                        <iframe src="./transicao_energetica_728x90/index.html" title="transicao_energetica_728x90"
-                            width="728px" height="90px" scrolling="no" frameborder="0"
-                            allow="autoplay; encrypted-media">
+                        <iframe src="./conheca_o_brasil_728x90/index.html" title="conheca_o_brasil_728x90"
+                            width="728px" height="90px" scrolling="no"
+                            frameborder="0" allow="autoplay; encrypted-media">
                         </iframe>
                     </td>
                 </tr>
-
+                
             </tbody>
         </table>
     </div>
