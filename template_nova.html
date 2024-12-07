@@ -21,25 +21,20 @@
             font-size: 0.8rem;
         }
 
-        .topbar,
-        .table {
-            width: 100%;
-            font-size: 0.8rem;
-        }
-
         .topbar {
-            background-color: gray;
-            padding: 10px 30px;
             display: flex;
-            justify-content: space-between;
+            background-color: gray;
             align-items: center;
+            justify-content: space-between;
             height: 80px;
+            padding: 10px 30px;
             width: 100%;
         }
 
         .table {
             text-transform: uppercase;
             margin-bottom: 0;
+            width: 100%;
         }
 
         .expanded {
@@ -70,19 +65,13 @@
             .topbar,
             .table {
                 width: 100%;
-                font-size: 0.7rem;
+                font-size: 0.6rem;
             }
 
-            .topbar {
-                flex-direction: column;
-                height: auto;
-                padding: 10px;
+            .thead-dark {
+                font-size: 0.55rem;
             }
 
-            .topbar img {
-                max-width: 100%;
-                height: auto;
-            }
 
             .icon-button i {
                 font-size: 0.7rem;
@@ -137,8 +126,14 @@
                 <tr>
                     <th scope="col">Cliente: SECOM</th>
                     <th scope="col">Agência: NOVA</th>
-                    <th scope="col">Campanha: TRANSIÇÃO ENERGÉTICA</th>
-                    <th scope="col">Período: Outubro/2024</th>
+                    <th scope="col" class="d-none d-md-table-cell"></th>
+                    <th scope="col">Campanha: CONHECA O BRASIL 2024</th>
+                    <th scope="col" class="d-none d-md-table-cell"></th>
+                    <th scope="col" class="d-none d-md-table-cell"></th>
+                    <th scope="col" class="d-none d-lg-table-cell"></th>
+                    <th scope="col" class="d-none d-md-table-cell"></th>
+                    <th scope="col" class="d-none d-lg-table-cell"></th>
+                    <th scope="col">Período: Dezembro/2024</th>
                     <th scope="col">
                         <button class="icon-button" id="printButton" title="Imprimir relatório"
                             aria-label="Imprimir relatório">
