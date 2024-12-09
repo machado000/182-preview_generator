@@ -11,7 +11,7 @@ with open('banner_list.csv', newline='', encoding='utf-8') as csvfile:
 
 # Set up Jinja2 environment
 env = Environment(loader=FileSystemLoader('.'))
-template = env.get_template('template_nova.html')
+template = env.get_template('./templates/template_propeg.html')
 
 # Render the template with data
 output = template.render(rows=data)
