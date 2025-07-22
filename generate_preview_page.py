@@ -4,7 +4,7 @@ from jinja2 import Environment, FileSystemLoader
 
 # Load the CSV file
 data = []
-with open('banner_list.csv', newline='', encoding='utf-8') as csvfile:
+with open('./banner_list.csv', newline='', encoding='utf-8') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
         data.append(row)
