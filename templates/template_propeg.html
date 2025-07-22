@@ -201,30 +201,97 @@
         document.getElementById("printButton").addEventListener("click", printPage);
         document.getElementById("toggleAllButton").addEventListener("click", toggleAllRows);
 
+        // Initialize button state on page load
+        updateToggleAllButton();
+
         function printPage() {
             window.print();
+        }
+
+        function loadIframe(iframe) {
+            if (!iframe.src && iframe.getAttribute('data-src')) {
+                iframe.src = iframe.getAttribute('data-src');
+            }
         }
 
         function refreshRow(contentId) {
             const iframe = document.querySelector(`#${contentId} iframe`);
             if (iframe) {
-                const src = iframe.src;
+                const src = iframe.src || iframe.getAttribute('data-src');
                 iframe.src = src;
             }
         }
 
         function toggleRow(rowId) {
             const row = document.getElementById(rowId);
+            const wasCollapsed = row.classList.contains('collapsed');
+
             row.classList.toggle("collapsed");
             row.classList.toggle("expanded");
+
+            // Load iframe when showing the row for the first time
+            if (wasCollapsed) {
+                const iframe = row.querySelector('iframe');
+                if (iframe) {
+                    loadIframe(iframe);
+                }
+            }
+
+            // Update toggle all button state
+            updateToggleAllButton();
+        }
+
+        function updateToggleAllButton() {
+            const rows = document.querySelectorAll("tr.collapsed, tr.expanded");
+            const hasExpandedRows = Array.from(rows).some(row => row.classList.contains('expanded'));
+            const button = document.getElementById('toggleAllButton');
+            const icon = button.querySelector('i');
+
+            if (hasExpandedRows) {
+                // If any row is expanded, button should show "hide all"
+                button.title = "Ocultar todos";
+                button.setAttribute('aria-label', 'Ocultar todos');
+                icon.textContent = 'visibility_off';
+            } else {
+                // If all rows are collapsed, button should show "show all"
+                button.title = "Exibir todos";
+                button.setAttribute('aria-label', 'Exibir todos');
+                icon.textContent = 'preview';
+            }
         }
 
         function toggleAllRows() {
             const rows = document.querySelectorAll("tr.collapsed, tr.expanded");
-            rows.forEach(row => {
-                row.classList.toggle("collapsed");
-                row.classList.toggle("expanded");
-            });
+
+            // Check if any row is currently expanded
+            const hasExpandedRows = Array.from(rows).some(row => row.classList.contains('expanded'));
+
+            if (hasExpandedRows) {
+                // If any row is expanded, hide all rows
+                rows.forEach(row => {
+                    row.classList.remove("expanded");
+                    row.classList.add("collapsed");
+                });
+            } else {
+                // If all rows are collapsed, show all rows
+                rows.forEach(row => {
+                    const wasCollapsed = row.classList.contains('collapsed');
+
+                    row.classList.remove("collapsed");
+                    row.classList.add("expanded");
+
+                    // Load iframe when showing the row for the first time
+                    if (wasCollapsed) {
+                        const iframe = row.querySelector('iframe');
+                        if (iframe) {
+                            loadIframe(iframe);
+                        }
+                    }
+                });
+            }
+
+            // Update button appearance after toggling
+            updateToggleAllButton();
         }
     </script>
 
