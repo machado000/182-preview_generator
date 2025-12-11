@@ -1,0 +1,3 @@
+$folders = "300x250","300x600","970x250","970x90","728x90","468x60","480x320","336x280","320x480",\
+"250x250","200x200","160x600","320x100","300x100","320x50","300x50"; \
+$folders | ForEach-Object { New-Item -ItemType Directory -Force -Path "banner_1$_" }
