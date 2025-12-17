@@ -11,13 +11,13 @@ with open('./banner_list.csv', newline='', encoding='utf-8') as csvfile:
 
 # Set up Jinja2 environment
 env = Environment(loader=FileSystemLoader('.'))
-template = env.get_template('./templates/template_nova.html')
+template = env.get_template('./templates/template_calix.html')
 
 # Render the template with data
 output = template.render(
-    cliente='BANCO DO BRASIL',
-    campanha='SKATE - POS-EVENTO',
-    periodo='JULHO/2025',
+    cliente='MIDR - MINISTÉRIO DA INTEGRAÇÃO E DESENVOLVIMENTO REGIONAL',
+    campanha='Cidades Sustentáveis e Resilientes',
+    periodo='Dezembro/2025',
     rows=data
 )
 
