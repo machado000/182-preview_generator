@@ -1,0 +1,8 @@
+[project]
+name = "182-preview-generator"
+version = "0.1.0"
+description = "Script to generate static webpages to preview web banners"
+requires-python = ">=3.12"
+dependencies = [
+    "jinja2>=3.1.6",
+]
