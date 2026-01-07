@@ -162,6 +162,7 @@ cython_debug/
 #.idea/
 
 # User custom extensions
+.DS_Store
 draft*
 banner_list.csv
 index.html
